@@ -5,4 +5,4 @@ blueprint = Blueprint('setup', __name__)
 
 @blueprint.route('/setup')
 def setup():
-    return render_template('setup.html')
+    return render_template('setup/setup_wrapper.html')

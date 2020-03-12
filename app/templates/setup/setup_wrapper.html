@@ -1,0 +1,27 @@
+{% extends 'shared/sidebar_layout.html' %}
+
+{% block content %}
+<div class="uk-background-default uk-padding uk-padding-remove-left uk-padding-remove-right uk-padding-remove-bottom">
+    <h1>Setup</h1>
+
+    <ul uk-tab uk-switcher="connect: #setup-nav; animation: uk-animation-fade">
+        <li class="uk-active"><a href="#">Food</a></li>
+        <li><a href="#">Order</a></li>
+        <li><a href="#">Vendor</a></li>
+        <li><a href="#">Status</a></li>
+    </ul>
+</div>
+
+
+<div class="uk-switcher uk-margin" id="setup-nav">
+    <div> {% block food %} {% endblock %} </div>
+    <div> <h1>order</h1> </div>
+    <div> {% block vendor %} {% endblock %} </div>
+    <div> <h1>Status</h1> </div>
+</div>
+
+
+
+{% endblock %}
+
+

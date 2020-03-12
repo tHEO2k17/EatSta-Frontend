@@ -1,0 +1,34 @@
+{% extends 'shared/base.html' %}
+
+{% block layout %}
+<div class="uk-container uk-container-expand">
+    <div class="uk-grid-collapse uk-grid-match uk-grid-divider" uk-grid>
+        <div class="uk-width-1-6@m uk-height-viewport">
+            <div class="uk-container uk-padding-top">
+                <img data-src="{{ url_for('static', filename = 'img/logo.png') }}" width="210" alt=""
+                     uk-img/>
+
+                <ul class="uk-nav-default uk-nav-parent-icon" uk-nav>
+                    <li><a href="#"><span class="uk-margin-small-right" uk-icon="icon: table"></span> Dashboard</a></li>
+                    <li><a href="#"><span class="uk-margin-small-right" uk-icon="icon: grid"></span> Orders</a></li>
+                    <li><a href="#"><span class="uk-margin-small-right" uk-icon="icon: thumbnails"></span> Food</a></li>
+                    <li class="uk-nav-divider"></li>
+                    <li class="uk-active">
+                        <a href="#">
+                            <span class="uk-margin-small-right" uk-icon="icon: cog"></span>
+                            Setup
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="uk-width-expand">
+            <section class="uk-section uk-section-muted uk-padding-remove-top">
+                <div class="uk-container uk-container-expand">
+                    {% block content %} {% endblock %}
+                </div>
+            </section>
+        </div>
+    </div>
+</div>
+{% endblock %}
